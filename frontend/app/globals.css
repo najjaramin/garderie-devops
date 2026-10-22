@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --ink: #263b36;
+  --muted: #687973;
+  --green: #438c72;
+  --green-dark: #28664f;
+  --cream: #fffaf1;
+  --pink: #f9e6df;
+  --yellow: #fff0bd;
+  --white: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--cream);
+  font-family: "DM Sans", sans-serif;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.navbar {
+  min-height: 82px;
+  padding: 18px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: rgba(255, 250, 241, 0.96);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 900;
+}
+
+.brand-icon { font-size: 2rem; }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-size: 0.93rem;
+  font-weight: 700;
+}
+
+.nav-links a:hover { color: var(--green); }
+
+.nav-links .nav-cta {
+  padding: 12px 18px;
+  color: white;
+  background: var(--green);
+  border-radius: 30px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 0.95fr;
+  align-items: center;
+  gap: 50px;
+  padding: 65px 7% 85px;
+}
+
+.hero-content { max-width: 590px; }
+
+.eyebrow {
+  display: inline-block;
+  color: var(--green-dark);
+  font-size: 0.84rem;
+  font-weight: 800;
+  letter-spacing: 0.025em;
+}
+
+.hero h1, .section-heading h2, .contact-section h2 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.hero h1 {
+  margin: 22px 0;
+  font-size: clamp(2.8rem, 5vw, 4.6rem);
+  line-height: 1.08;
+}
+
+.hero h1 span { color: var(--green); }
+
+.hero-content > p {
+  max-width: 500px;
+  color: var(--muted);
+  font-size: 1.06rem;
+  line-height: 1.85;
+}
+
+.hero-slogan { font-weight: 700; }
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.button-primary, .button-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 13px 21px;
+  border-radius: 30px;
+  font-weight: 800;
+}
+
+.button-primary {
+  color: white;
+  background: var(--green);
+}
+
+.button-primary:hover { background: var(--green-dark); }
+
+.button-secondary {
+  background: white;
+  border: 1px solid #e6e8dd;
+}
+
+.hero-note {
+  margin-top: 25px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.hero-image {
+  position: relative;
+  min-height: 440px;
+  border-radius: 46% 46% 24px 24px;
+  background-color: #dcebd8;
+  background-image: url("https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1200&q=85");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 24px 60px rgba(45, 79, 58, 0.12);
+}
+
+.image-badge {
+  position: absolute;
+  bottom: 25px;
+  left: -25px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 17px 20px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px #263b3617;
+}
+
+.image-badge > span { font-size: 2rem; }
+.image-badge strong, .image-badge small { display: block; }
+.image-badge small { margin-top: 4px; color: var(--muted); }
+
+.section { padding: 75px 7%; }
+
+.services-section { background: white; }
+
+.section-heading {
+  max-width: 650px;
+  margin: 0 auto 38px;
+  text-align: center;
+}
+
+.section-heading h2, .contact-section h2 {
+  margin: 12px 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.section-heading p, .contact-section p {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.services-grid, .activities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.service-card {
+  padding: 30px 25px;
+  border: 1px solid #edf0e8;
+  border-radius: 22px;
+  background: #fffefa;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px #263b3610;
+}
+
+.service-icon { font-size: 2.5rem; }
+
+.service-card h3, .activity-card h3 {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.2rem;
+}
+
+.service-card p, .activity-card p {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.activities-section { background: var(--cream); }
+
+.activity-card {
+  padding: 25px;
+  border-radius: 20px;
+  background: white;
+}
+
+.activity-number {
+  color: var(--green);
+  font-family: "Nunito", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+
+.contact-section {
+  padding: 70px 7%;
+  text-align: center;
+  background: var(--yellow);
+}
+
+.contact-section p { margin-bottom: 25px; }
+
+.footer {
+  padding: 25px 7%;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.error-message, .status-message {
+  padding: 16px;
+  text-align: center;
+  color: #a33;
+}
+
+@media (max-width: 800px) {
+  .navbar { align-items: flex-start; flex-direction: column; }
+  .nav-links { flex-wrap: wrap; gap: 15px; }
+  .hero { grid-template-columns: 1fr; padding-top: 40px; }
+  .hero-image { min-height: 350px; margin-left: 20px; }
+  .services-grid, .activities-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .navbar { padding: 18px 5%; }
+  .nav-links { gap: 12px; font-size: 0.85rem; }
+  .hero, .section { padding-left: 5%; padding-right: 5%; }
+  .hero h1 { font-size: 2.8rem; }
+  .hero-image { min-height: 280px; }
+  .image-badge { left: -10px; bottom: 15px; }
+  .hero-actions { align-items: stretch; flex-direction: column; }
+}
+
+
+.email-section {
+  padding: 80px 24px;
+  text-align: center;
+  background: #fff7ed;
+}
+
+.email-section h2 {
+  margin: 16px 0;
+  color: #253047;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+
+.email-section p {
+  max-width: 600px;
+  margin: 0 auto 28px;
+  color: #64748b;
+  line-height: 1.8;
+}
+
+.email-section .button-primary {
+  display: inline-block;
+  padding: 14px 24px;
+  border-radius: 12px;
+  background: #f59e0b;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.email-section .button-primary:hover {
+  background: #d97706;
+  transform: translateY(-2px);
+}
